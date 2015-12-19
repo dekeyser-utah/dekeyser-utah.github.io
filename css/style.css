@@ -94,3 +94,17 @@ footer .glyphicon {
 footer .glyphicon:hover {
   color: #306d9f;
 }
+
+.jumbotron.carousel-caption, .carousel-caption {
+ background-color: rgba(0, 0, 0, 0.25);
+ padding-left:0px;
+ padding-right:0px;
+}
+
+.slider-caption {
+	position: absolute;
+	top: 380px; 
+	left: 125px; 
+	width: 350px;
+	height: 50px;
+}

@@ -3,17 +3,164 @@
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="Script Tutorials" />
-  <title>Vakantiehuis Melanie Thomas in Utah Beach FR</title>
+  <title>Vakantiehuis Melanie Thomas in Utah Beach, Normandie, FR</title>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- attach CSS styles -->
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">  
   <link href="css/style.css" rel="stylesheet" />
+  
+  <!-- attach js-scripts -->
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+
     
 </head>
 <body>
+    <script>
+        jQuery(document).ready(function ($) {
+            
+            var jssor_1_options = {
+			  $FillMode: 1,
+              $AutoPlay: false,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Cols: 9,
+                $SpacingX: 3,
+                $SpacingY: 3,
+                $Align: 260,
+                $Scale: false
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+
+    <style>
+        
+        /* jssor slider arrow navigator skin 02 css */
+        /*
+        .jssora02l                  (normal)
+        .jssora02r                  (normal)
+        .jssora02l:hover            (normal mouseover)
+        .jssora02r:hover            (normal mouseover)
+        .jssora02l.jssora02ldn      (mousedown)
+        .jssora02r.jssora02rdn      (mousedown)
+        */
+        .jssora02l, .jssora02r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('images/a02.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora02l { background-position: -3px -33px; }
+        .jssora02r { background-position: -63px -33px; }
+        .jssora02l:hover { background-position: -123px -33px; }
+        .jssora02r:hover { background-position: -183px -33px; }
+        .jssora02l.jssora02ldn { background-position: -3px -33px; }
+        .jssora02r.jssora02rdn { background-position: -63px -33px; }
+
+        /* jssor slider thumbnail navigator skin 03 css */
+        /*
+        .jssort03 .p            (normal)
+        .jssort03 .p:hover      (normal mouseover)
+        .jssort03 .pav          (active)
+        .jssort03 .pdn          (mousedown)
+        */
+        
+        .jssort03 .p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 62px;
+            height: 32px;
+        }
+        
+        .jssort03 .t {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .jssort03 .w, .jssort03 .pav:hover .w {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            border: white 1px dashed;
+            box-sizing: content-box;
+        }
+        
+        .jssort03 .pdn .w, .jssort03 .pav .w {
+            border-style: solid;
+        }
+        
+        .jssort03 .c {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 62px;
+            height: 32px;
+            background-color: #000;
+        
+            filter: alpha(opacity=45);
+            opacity: .45;
+            transition: opacity .6s;
+            -moz-transition: opacity .6s;
+            -webkit-transition: opacity .6s;
+            -o-transition: opacity .6s;
+        }
+        
+        .jssort03 .p:hover .c, .jssort03 .pav .c {
+            filter: alpha(opacity=0);
+            opacity: 0;
+        }
+        
+        .jssort03 .p:hover .c {
+            transition: none;
+            -moz-transition: none;
+            -webkit-transition: none;
+            -o-transition: none;
+        }
+        
+        * html .jssort03 .w {
+            width /**/: 62px;
+            height /**/: 32px;
+        }
+        
+    </style>
+
+
 
   <!--  BODY PAGE CONTENT -->
 
@@ -155,7 +302,7 @@
 			  <div class="panel-body lead">
 				<ul>
 					<li>1 badkamer met ligbad en lavabo</li>
-					<li>1 badkamer met inloopdouche en lavabo (beschikbaar vanaf begin 2016)</li>
+					<li>1 badkamer met inloopdouche en lavabo</li>
 					<li>2 aparte toiletten</li>
 				</ul>
 			  </div>
@@ -209,217 +356,136 @@
 	<div id="fotos" class="pad-section">
 	  <div class="container">
 		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3">
-				<!--#region Jssor Slider Begin -->
-				<!-- To move inline styles to css file/block, please specify a class name for each element. -->
-				<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px;
-					height: 556px; background: #24262e; overflow: hidden;">
-
-					<!-- Loading Screen -->
-					<div u="loading" style="position: absolute; top: 0px; left: 0px;">
-						<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-							background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
-						</div>
-						<div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat 50% 50%;
-							top: 0px; left: 0px;width: 100%;height:100%;">
-						</div>
-					</div>
-
-					<!-- Slides Container -->
-					<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 456px; overflow: hidden;">
-						<div>
-							<img u="image" src="album/slides/01. Buiten DSC01584.JPG" />
-							<img u="thumb" src="album/thumbs/01. Buiten DSC01584.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/01. Buiten DSC01585.JPG" />
-							<img u="thumb" src="album/thumbs/01. Buiten DSC01585.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/01. Buiten DSC01588.JPG" />
-							<img u="thumb" src="album/thumbs/01. Buiten DSC01588.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/01. Buiten DSC01590.JPG" />
-							<img u="thumb" src="album/thumbs/01. Buiten DSC01590.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/01. Buiten DSC01645.JPG" />
-							<img u="thumb" src="album/thumbs/01. Buiten DSC01645.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/01. Buiten DSC01652.JPG" />
-							<img u="thumb" src="album/thumbs/01. Buiten DSC01652.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/02. Living DSC01567.JPG" />
-							<img u="thumb" src="album/thumbs/02. Living DSC01567.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/02. Living DSC01570.JPG" />
-							<img u="thumb" src="album/thumbs/02. Living DSC01570.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/02. Living DSC01571.JPG" />
-							<img u="thumb" src="album/thumbs/02. Living DSC01571.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/03 Keuken DSC01592.JPG" />
-							<img u="thumb" src="album/thumbs/03 Keuken DSC01592.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/03 Keuken DSC01594.JPG" />
-							<img u="thumb" src="album/thumbs/03 Keuken DSC01594.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/04. Badkamer 1 beneden DSC01661.JPG" />
-							<img u="thumb" src="album/thumbs/04. Badkamer 1 beneden DSC01661.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/05. Badkamen 2 boven DSC01635.JPG" />
-							<img u="thumb" src="album/thumbs/05. Badkamen 2 boven DSC01635.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/06. Slaapkamer 1 beneden DSC01660.JPG" />
-							<img u="thumb" src="album/thumbs/06. Slaapkamer 1 beneden DSC01660.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/07. Slaapkamer 2 dubbel bed DSC01631.JPG" />
-							<img u="thumb" src="album/thumbs/07. Slaapkamer 2 dubbel bed DSC01631.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/08. Slaapkamer 3 kinderkamer DSC01666.JPG" />
-							<img u="thumb" src="album/thumbs/08. Slaapkamer 3 kinderkamer DSC01666.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/08. Slaapkamer 3 kinderkamer DSC01668.JPG" />
-							<img u="thumb" src="album/thumbs/08. Slaapkamer 3 kinderkamer DSC01668.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/09. Slaapkamer 4 zeekant DSC01639.JPG" />
-							<img u="thumb" src="album/thumbs/09. Slaapkamer 4 zeekant DSC01639.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/10. Slaapkamer 5 straatkant DSC01663.JPG" />
-							<img u="thumb" src="album/thumbs/10. Slaapkamer 5 straatkant DSC01663.JPG" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/sitAChatas11.png" />
-							<img u="thumb" src="album/thumbs/sitAChatas11.png" />
-						</div>
-						<div>
-							<img u="image" src="album/slides/sitUtahBch.png" />
-							<img u="thumb" src="album/thumbs/sitUtahBch.png" />
-						</div>
-
-					</div>
-					
-					<!--#region Thumbnail Navigator Skin Begin -->
-					<!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
-					<style>
-						/* jssor slider thumbnail navigator skin 01 css */
-						/*
-						.jssort01 .p            (normal)
-						.jssort01 .p:hover      (normal mouseover)
-						.jssort01 .p.pav        (active)
-						.jssort01 .p.pdn        (mousedown)
-						*/
-
-						.jssort01 {
-							position: absolute;
-							/* size of thumbnail navigator container */
-							width: 800px;
-							height: 100px;
-						}
-
-							.jssort01 .p {
-								position: absolute;
-								top: 0;
-								left: 0;
-								width: 72px;
-								height: 72px;
-							}
-
-							.jssort01 .t {
-								position: absolute;
-								top: 0;
-								left: 0;
-								width: 100%;
-								height: 100%;
-								border: none;
-							}
-
-							.jssort01 .w {
-								position: absolute;
-								top: 0px;
-								left: 0px;
-								width: 100%;
-								height: 100%;
-							}
-
-							.jssort01 .c {
-								position: absolute;
-								top: 0px;
-								left: 0px;
-								width: 68px;
-								height: 68px;
-								border: #000 2px solid;
-								box-sizing: content-box;
-								background: url(../img/t01.png) -800px -800px no-repeat;
-								_background: none;
-							}
-
-							.jssort01 .pav .c {
-								top: 2px;
-								_top: 0px;
-								left: 2px;
-								_left: 0px;
-								width: 68px;
-								height: 68px;
-								border: #000 0px solid;
-								_border: #fff 2px solid;
-								background-position: 50% 50%;
-							}
-
-							.jssort01 .p:hover .c {
-								top: 0px;
-								left: 0px;
-								width: 70px;
-								height: 70px;
-								border: #fff 1px solid;
-								background-position: 50% 50%;
-							}
-
-							.jssort01 .p.pdn .c {
-								background-position: 50% 50%;
-								width: 68px;
-								height: 68px;
-								border: #000 2px solid;
-							}
-
-							* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {
-								/* ie quirks mode adjust */
-								width /**/: 72px;
-								height /**/: 72px;
-							}
-					</style>
-
-					<!-- thumbnail navigator container -->
-					<div u="thumbnavigator" class="jssort01" style="left: 0px; bottom: 0px;">
-						<!-- Thumbnail Item Skin Begin -->
-						<div u="slides" style="cursor: default;">
-							<div u="prototype" class="p">
-								<div class=w><div u="thumbnailtemplate" class="t"></div></div>
-								<div class=c></div>
-							</div>
-						</div>
-						<!-- Thumbnail Item Skin End -->
-					</div>
-					<!--#endregion Thumbnail Navigator Skin End -->
-					<a style="display: none" href="http://www.jssor.com">Slider Javascript</a>
+			<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 425px; overflow: hidden; visibility: hidden;">
+				<!-- Loading Screen -->
+				<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+					<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+					<div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
 				</div>
-				<!--#endregion Jssor Slider End -->
+				<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 425px; overflow: hidden;">
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/01. Buiten DSC01584.JPG" />
+						<img data-u="thumb" src="album/thumbs/01. Buiten DSC01584.JPG" />
+						<div u="caption" t="caption-transition-name" class="slider-caption">
+							<div class="jumbotron carousel-caption">Straatkant</div>
+						</div>						
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/01. Buiten DSC01585.JPG" />
+						<img data-u="thumb" src="album/thumbs/01. Buiten DSC01585.JPG" />
+						<div u="caption" t="caption-transition-name" class="slider-caption">
+							<div class="jumbotron carousel-caption">Straatkant</div>
+						</div>												
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/01. Buiten DSC01588.JPG" />
+						<img data-u="thumb" src="album/thumbs/01. Buiten DSC01588.JPG" />
+						<div u="caption" t="caption-transition-name" class="slider-caption">
+							<div class="jumbotron carousel-caption">Zeekant, vanuit terras</div>
+						</div>												
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/01. Buiten DSC01590.JPG" />
+						<img data-u="thumb" src="album/thumbs/01. Buiten DSC01590.JPG" />
+						<div u="caption" t="caption-transition-name" class="slider-caption">
+							<div class="jumbotron carousel-caption">Zeekant, vanuit 1ste verdiep</div>
+						</div>												
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/01. Buiten DSC01645.JPG" />
+						<img data-u="thumb" src="album/thumbs/01. Buiten DSC01645.JPG" />
+						<div u="caption" t="caption-transition-name" class="slider-caption">
+							<div class="jumbotron carousel-caption">Terras aan zeekant</div>
+						</div>												
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/01. Buiten DSC01652.JPG" />
+						<img data-u="thumb" src="album/thumbs/01. Buiten DSC01652.JPG" />
+						<div u="caption" t="caption-transition-name" class="slider-caption">
+							<div class="jumbotron carousel-caption">Huis vanuit zeekant</div>
+						</div>												
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/02. Living DSC01567.JPG" />
+						<img data-u="thumb" src="album/thumbs/02. Living DSC01567.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/02. Living DSC01570.JPG" />
+						<img data-u="thumb" src="album/thumbs/02. Living DSC01570.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/02. Living DSC01571.JPG" />
+						<img data-u="thumb" src="album/thumbs/02. Living DSC01571.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/03 Keuken DSC01592.JPG" />
+						<img data-u="thumb" src="album/thumbs/03 Keuken DSC01592.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/03 Keuken DSC01594.JPG" />
+						<img data-u="thumb" src="album/thumbs/03 Keuken DSC01594.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/04. Badkamer 1 beneden DSC01661.JPG" />
+						<img data-u="thumb" src="album/thumbs/04. Badkamer 1 beneden DSC01661.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/05. Badkamen 2 boven DSC01635.JPG" />
+						<img data-u="thumb" src="album/thumbs/05. Badkamen 2 boven DSC01635.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/06. Slaapkamer 1 beneden DSC01660.JPG" />
+						<img data-u="thumb" src="album/thumbs/06. Slaapkamer 1 beneden DSC01660.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/07. Slaapkamer 2 dubbel bed DSC01631.JPG" />
+						<img data-u="thumb" src="album/thumbs/07. Slaapkamer 2 dubbel bed DSC01631.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/08. Slaapkamer 3 kinderkamer DSC01666.JPG" />
+						<img data-u="thumb" src="album/thumbs/08. Slaapkamer 3 kinderkamer DSC01666.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/08. Slaapkamer 3 kinderkamer DSC01668.JPG" />
+						<img data-u="thumb" src="album/thumbs/08. Slaapkamer 3 kinderkamer DSC01668.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/09. Slaapkamer 4 zeekant DSC01639.JPG" />
+						<img data-u="thumb" src="album/thumbs/09. Slaapkamer 4 zeekant DSC01639.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/10. Slaapkamer 5 straatkant DSC01663.JPG" />
+						<img data-u="thumb" src="album/thumbs/10. Slaapkamer 5 straatkant DSC01663.JPG" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/sitAChatas11.png" />
+						<img data-u="thumb" src="album/thumbs/sitAChatas11.png" />
+					</div>
+					<div data-p="112.50" style="display: none;">
+						<img data-u="image" src="album/slides/sitUtahBch.png" />
+						<img data-u="thumb" src="album/thumbs/sitUtahBch.png" />
+					</div>						
+				</div>
+				<!-- Thumbnail Navigator -->
+				<div u="thumbnavigator" class="jssort03" style="position:absolute;left:0px;bottom:0px;width:600px;height:60px;" data-autocenter="1">
+					<div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=30.0); opacity:0.3;"></div>
+					<!-- Thumbnail Item Skin Begin -->
+					<div u="slides" style="cursor: default;">
+						<div u="prototype" class="p">
+							<div class="w">
+								<div u="thumbnailtemplate" class="t"></div>
+							</div>
+							<div class="c"></div>
+						</div>
+					</div>
+					<!-- Thumbnail Item Skin End -->
+				</div>
+				<!-- Arrow Navigator -->
+				<span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+				<span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+				<a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
 			</div>
+
 		</div>
 	  </div>
 	</div>
@@ -439,46 +505,6 @@
 			</div>
 	  </div>
 	</div>
-
-
-
-
-
-
-
-  <!-- attach JavaScripts -->
-  <!--script src="http://code.jquery.com/jquery-2.1.3.min.js"></script-->
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  
-  <!-- album -->
-  <script src="js/jssor.slider.mini.js"></script>
-    <script>
-        init_jssor_slider1 = function (containerId) {
-            var options = {
-                $FillMode: 1,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0				
-                $AutoPlay: false,                                   //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-
-                $ThumbnailNavigatorOptions: {                       //[Optional] Options to specify and enable thumbnail navigator or not
-                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-
-                    $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
-                    $SpacingX: 8,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
-                    $DisplayPieces: 10,                             //[Optional] Number of pieces to display, default value is 1
-                    $ParkingPosition: 360                           //[Optional] The offset position to park thumbnail
-                },
-                
-            };
-
-            var jssor_slider1 = new $JssorSlider$(containerId, options);
-        };
-    </script>
-
-	<script>
-		init_jssor_slider1("slider1_container");
-	</script>
 
 </body>
 </html>

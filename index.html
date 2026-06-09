@@ -567,9 +567,34 @@
 			</div>
 
 		</div>
+		<div class="row" style="margin-top: 30px;">
+		  <div class="col-sm-8 col-sm-offset-2">
+			<div id="youtube-video-embed" class="embed-responsive embed-responsive-16by9" style="display: none;">
+			  <iframe id="youtube-video-frame" class="embed-responsive-item" data-src="https://www.youtube.com/embed/cJyLmjSlK_w?rel=0" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+			<a id="youtube-video-link" href="https://youtu.be/cJyLmjSlK_w" target="_blank" rel="noopener" class="embed-responsive embed-responsive-16by9" style="background: #222; color: #fff; text-decoration: none;">
+			  <img class="embed-responsive-item" src="https://img.youtube.com/vi/cJyLmjSlK_w/mqdefault.jpg" alt="YouTube video preview" style="object-fit: cover;">
+			  <span class="btn btn-default btn-lg" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Watch video on YouTube</span>
+			</a>
+		  </div>
+		</div>
 	  </div>
 	</div>
 	<!-- /second section -->
+
+	<script>
+	  (function () {
+		var videoEmbed = document.getElementById('youtube-video-embed');
+		var videoFrame = document.getElementById('youtube-video-frame');
+		var videoLink = document.getElementById('youtube-video-link');
+
+		if (window.location.protocol !== 'file:') {
+		  videoFrame.src = videoFrame.getAttribute('data-src');
+		  videoEmbed.style.display = 'block';
+		  videoLink.style.display = 'none';
+		}
+	  }());
+	</script>
 
 
 	<!-- map -->

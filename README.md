@@ -11,3 +11,8 @@ done
 
 
 
+# local setup
+```
+python3 -m http.server 8000
+```
+Required for the youtube iframe to work.

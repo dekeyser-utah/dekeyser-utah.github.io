@@ -1,5 +1,6 @@
-# utah-promotion
-utah-promotion
+# Description
+Static page to promote our house in Normandie, France.
+Deployed on github pages at https://dekeyser-utah.github.io/
 
 
 # thumb and resize staand
